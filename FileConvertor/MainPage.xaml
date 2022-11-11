@@ -1,0 +1,23 @@
+﻿<Page
+    Name="mainPage"
+    x:Class="FileConvertor.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FileConvertor"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="347" Width="470" Loaded="Page_Loaded">
+
+    <Grid Margin="0,0,10,10" AllowDrop="True" DragOver="Grid_DragOver" Drop="Grid_Drop">
+        <ComboBox Name="destinationFormat" Margin="281,165,0,0" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="307,145,0,0" TextWrapping="Wrap" Text="Convert to:" VerticalAlignment="Top" Height="23" Width="73"/>
+        <Button Name="button" Content="Convert" Margin="0,237,0,0" VerticalAlignment="Top" Width="99" Height="30" Click="Button_Click" HorizontalAlignment="Center" IsEnabled="False"/>
+        <TextBlock Name="dropBox" HorizontalAlignment="Left" Margin="37,31,0,0" TextWrapping="Wrap" Text="Drop your file here" VerticalAlignment="Top" Height="109" Width="391"/>
+        <TextBlock Name="statusField" HorizontalAlignment="Left" Margin="82,303,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <ProgressBar Name="progressBar" HorizontalAlignment="Left" Height="10" Margin="181,312,0,0" VerticalAlignment="Top" Width="175" Visibility="Collapsed"/>
+        <TextBlock HorizontalAlignment="Left" Margin="37,145,0,0" TextWrapping="Wrap" Text="Provided format:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="statusField_Copy" HorizontalAlignment="Left" Margin="37,303,0,0" TextWrapping="Wrap" Text="Status: " VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
